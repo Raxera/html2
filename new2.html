@@ -8,7 +8,7 @@
 <body>
     <input type="number" id="number1">
     <input type="number" id="number2">
-    <p id="result">Sonuç</p>
+    <p id="result"></p>
     <button onclick="myfunction()">Tıkla</button>
 
     <script>
@@ -17,20 +17,22 @@
 
             number1 = parseInt(document.getElementById("number1").value);
             number2 = parseInt(document.getElementById("number2").value);
-            result = (document.getElementById("result"));
+            resultElement = (document.getElementById("result"));
             
             if (number1>number2) {
     
                 reversednumber1 = number1.toString().split("").reverse("").join("");
                 result = reversednumber1 + number2;
-                result.textContent = result;
-                console.log(result);       
+                resultElement.textContent = result;
+                console.log(result);
+                alert(result.length + " Tane Sayı Vardır");                
         }
         else{
             reversednumber2 = number2.toString().split("").reverse("").join("");
             result = reversednumber2 + number1;
-            result.textContent = result;
+            resultElement.textContent = result;
             console.log(result);
+            alert(result.length + " Tane Sayı Vardır"); 
         }
         
         }
